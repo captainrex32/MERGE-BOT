@@ -305,7 +305,7 @@ async def files_handler(c: Client, m: Message):
                 await c.delete_messages(
                     chat_id=m.chat.id, message_ids=replyDB.get(user_id)
                 )
-            if len(queueDB.get(user_id)["videos"]) == 10:
+            if len(queueDB.get(user_id)["videos"]) == 18:
                 MessageText = "Okay, Now Just Press **Merge Now** Button Plox!"
             markup = await makeButtons(c, m, queueDB)
             reply_ = await editable.edit(
