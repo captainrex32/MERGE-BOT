@@ -312,7 +312,7 @@ async def files_handler(c: Client, m: Message):
                 text=MessageText, reply_markup=InlineKeyboardMarkup(markup)
             )
             replyDB.update({user_id: reply_.id})
-        elif len(queueDB.get(user_id)["videos"]) > 10:
+        elif len(queueDB.get(user_id)["videos"]) > 18:
             markup = await makeButtons(c, m, queueDB)
             await editable.text(
                 "Max 10 videos allowed", reply_markup=InlineKeyboardMarkup(markup)
@@ -488,7 +488,7 @@ async def about_handler(c: Client, m: Message):
         quote=True,
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("👨‍💻Developer👨‍💻", url="https://t.me/yashoswalyo")],
+                [InlineKeyboardButton("👨‍💻Developer👨‍💻", url="https://t.me/chayan223")],
                 [
                     InlineKeyboardButton(
                         "🏘Source Code🏘", url="https://github.com/yashoswalyo/MERGE-BOT"
